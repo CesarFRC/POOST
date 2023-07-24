@@ -10,10 +10,10 @@
          * Conexion constructor.
          */
         public static $DB = null;
-        public $dbname = "";
-        public $host = "";
-        public $user = "";
-        public $password = "";
+        public $dbname = "rincon_de_las_brujas";
+        public $host = "localhost";
+        public $user = "root";
+        public $password = "123";
         /**ic
          * Conexion constructor.
          * @param string $dbname
@@ -116,3 +116,5 @@
             self::$DB = null;
         }
     }
+
+   
