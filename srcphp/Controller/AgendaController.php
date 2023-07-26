@@ -10,10 +10,9 @@ use proyecto\Response\Success;
 class AgendaController
 {
    function registrarTelefono(){
-         $t=new Telefono();
-         $t->numero="123456789";
-            $t->usuarios_id=12;
-            $t->save();
+         $q=Table::query("");
+         $t=new Success($q);
+         $t->Send();
             $r= new Success($t);
             return $r->Send();
     }
@@ -40,3 +39,12 @@ class AgendaController
 
     }
 }
+
+
+
+
+
+
+
+
+

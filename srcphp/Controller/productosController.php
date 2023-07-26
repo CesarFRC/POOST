@@ -23,4 +23,10 @@ class productosController
         $r = new Success();
         $r->Send();
     }
+    function consultarproducto()
+    {
+        $q=Table::query("select * from producto");
+        $t=new Success($q);
+        $t->Send();
+    }
 }

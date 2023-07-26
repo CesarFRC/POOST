@@ -5,6 +5,12 @@ require("../vendor/autoload.php");
 
 use proyecto\Controller\crearPersonaController;
 use proyecto\Models\User;
+use proyecto\Models\producto;
+use proyecto\Models\ordenventa;
+use proyecto\Models\orden_apartado;
+use proyecto\Models\detalleventa;
+use proyecto\Models\detalleapartado;
+use proyecto\Models\categoria;
 use proyecto\Response\Failure;
 use proyecto\Response\Success;
 
@@ -18,7 +24,7 @@ Router::post('/orden_venta/registrar',[orden_ventaController::class,"registraror
 Router::post('/productos/registrar',[productosController::class,"registrarproducto"]);
 Router::get('/crearpersona', [crearPersonaController::class, "crearPersona"]);
 Router::get('/usuario/buscar/$id', function ($id) {
-
+Router::get('/selecionartodo/producto',[productosController::class,"consultarproducto"]);
     $user= User::find($id);
     if(!$user)
     {
